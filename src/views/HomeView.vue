@@ -1,12 +1,13 @@
 <template>
   <div class="home">
     <hero-section/>
-    <hr>
+
     <about-section/>
-    <hr>
+
     <service-section/>
-    <hr>
+
     <portfolio-section/>
+    <footer-section/>
   </div>
 </template>
 
@@ -15,6 +16,7 @@ import HeroSection from '@/components/sections/HeroSection.vue';
 import AboutSection from '@/components/sections/AboutSection.vue';
 import ServiceSection from '@/components/sections/ServiceSection.vue';
 import PortfolioSection from '@/components/sections/PortfolioSection.vue';
+import FooterSection from '@/components/sections/FooterSection.vue';
 // @ is an alias to /src
 
 export default {
@@ -22,8 +24,10 @@ export default {
   components: {
     HeroSection,AboutSection,
     ServiceSection,
-    PortfolioSection
-    
+    PortfolioSection,
+    FooterSection
   }
 }
 </script>
+,
+    FooterSection

@@ -7,7 +7,15 @@
 body {
   scroll-behavior: smooth;
 }
-
+a {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+section {
+  padding: 40px 0;
+}
 /*ANIMATIONS*/
 @keyframes HERO_ANIMATION {
   0% {
