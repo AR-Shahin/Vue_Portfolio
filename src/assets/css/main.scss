@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+/*ANIMATIONS*/
+@keyframes HERO_ANIMATION {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.9);
+  }
+  20% {
+    transform: scale(0.8);
+  }
+  30% {
+    transform: scale(0.7);
+  }
+  40% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  60% {
+    transform: scale(0.95);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  80% {
+    transform: scale(0.8);
+  }
+  90% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(0.98);
+  }
+}
+
+/* Responsive */
+@media only screen and (max-width: 480px) {
+  #hero-section .hero-content {
+    padding: 80px 0 0px 0 !important;
+  }
+  #hero-section img {
+    margin-top: 10px;
+  }
+  #hero-section .tagline {
+    margin-left: -160px;
+  }
+  #abt_skill {
+    margin-top: 10px;
+  }
+  #about_section h2 {
+    margin-top: 25px;
+  }
+  #counter_section .col-12 {
+    border-bottom: 1px solid #fff;
+    padding: 10px 0;
+  }
+  #contact .bg {
+    padding: 0;
+    text-align: center;
+    height: 100%;
+  }
+  #contact .bg_content {
+    left: 0;
+    position: inherit;
+  }
+  #contact .contact_media {
+    border-bottom: 1px solid #fff;
+    padding: 10px 0;
+  }
+  #contact .socal_links {
+    margin: 0px;
+    text-align: center;
+    margin-bottom: 25px;
+    margin-left: 15px;
+  }
+  #contact form {
+    margin-top: 15px;
+  }
+  #link_section {
+    padding: 25px 0;
+  }
+  #link_section .col-12 {
+    padding: 10px 0;
+    border-bottom: 1px solid #fff;
+  }
+  #link_section .custom_textRight {
+    text-align: right;
+  }
+  section {
+    padding: 25px 0;
+  }
+  h3 {
+    font-size: 28px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  #projects .btn-group {
+    display: inline;
+  }
+  #projects .btn-group a {
+    margin-bottom: 5px;
+  }
+}
+@media (min-width: 380px) and (max-width: 575px) {
+  #hero-section .hero-content {
+    padding: 80px 0 0px 0 !important;
+  }
+  #hero-section img {
+    margin-top: 10px;
+  }
+  #hero-section .tagline {
+    margin-left: -200px !important;
+  }
+  #abt_skill {
+    margin-top: 10px;
+  }
+  #about_section h2 {
+    margin-top: 25px;
+  }
+  #counter_section .col-12 {
+    border-bottom: 1px solid #fff;
+    padding: 10px 0;
+  }
+  #contact .bg {
+    padding: 0;
+    text-align: center;
+    height: 100%;
+  }
+  #contact .bg_content {
+    left: 0;
+    position: inherit;
+  }
+  #contact .contact_media {
+    border-bottom: 1px solid #fff;
+    padding: 10px 0;
+  }
+  #contact .socal_links {
+    margin: 0;
+    text-align: center;
+    margin-bottom: 25px;
+    margin-left: 80px;
+  }
+  #contact form {
+    margin-top: 15px;
+  }
+  #link_section {
+    padding: 25px 0;
+  }
+  #link_section .col-12 {
+    padding: 10px 0;
+    border-bottom: 1px solid #fff;
+  }
+  #link_section .custom_textRight {
+    text-align: right;
+  }
+  section {
+    padding: 35px 0;
+  }
+  #projects .btn-group {
+    display: inline;
+  }
+}
+/*@media (min-width:576px) and (max-width:767px){*/
+
+/*}*/
