@@ -5,4 +5,42 @@
 }
 
 body {
+  scroll-behavior: smooth;
+}
+
+/*ANIMATIONS*/
+@keyframes HERO_ANIMATION {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.9);
+  }
+  20% {
+    transform: scale(0.8);
+  }
+  30% {
+    transform: scale(0.7);
+  }
+  40% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  60% {
+    transform: scale(0.95);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  80% {
+    transform: scale(0.8);
+  }
+  90% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(0.98);
+  }
 }
