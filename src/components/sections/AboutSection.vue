@@ -7,7 +7,7 @@
                     <div class="owl-carousel about_slider">
                         <div class="single-slider-image">
                             <div class="img-box">
-                                <img src="" alt="" class="img-fluid" />
+                                <img src="../../assets/img/my/img.jpg" alt="" class="img-fluid" />
                             </div>
                             <div class="pos_content">
                                 <span>Shahin</span>
@@ -166,6 +166,22 @@
 </script>
 
 <style lang="css" scoped>
+.myImage_slider{}
+.myImage_slider .owl-dots{
+    display: none;
+}
+.myImage_slider .single-slider-image{
+    position: relative;
+}
+.myImage_slider .single-slider-image .pos_content{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: #6D214F;
+    color: #fff;
+    padding: 10px;
+    border-top-left-radius: 5px;
+}
     #about_section ul li{
         display: inline-block;
     }
