@@ -41,5 +41,7 @@
 </script>
 
 <style lang="scss" scoped>
-
+#youtube_section{
+    background: #f1c40f2c;
+}
 </style>
