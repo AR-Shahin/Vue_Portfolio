@@ -1,0 +1,45 @@
+<template>
+    <section id="youtube_section">
+        <div class="container">
+            <div class="row text-center">
+            <div class="col-12">
+                <div class="sec_title wow animate__animated animate__zoomIn">
+                    <h2 class="mb-0 pb-1">My Courses</h2>
+                    <p class="m-0 p-0">My Free Courses</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Courses -->
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-4 col-12 mb-4" v-for="i in 6" :key="i">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <img src="../../assets/img/about/support.png" alt="" class="img-fluid">
+                            <h3 class="card-title my-3">Web Design</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe illo expedita facere doloremque voluptas amet?</p>
+                            <ul>
+                                <li><span class="text-muted"><b>Duration</b> : 5hr</span></li>
+                                <li><span class="text-muted"><b>Videos</b> : 10+</span></li>
+                                <li><span class="text-muted"><b>Tags</b> : PHP,Laravel,WEB</span></li>
+                                <li class="mt-2"><a href="" class="btn btn-sm btn-success"><i class="fa fa-eye"></i> View Course</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+</template>
+
+<script>
+    export default {
+        
+    }
+</script>
+
+<style lang="scss" scoped>
+
+</style>
