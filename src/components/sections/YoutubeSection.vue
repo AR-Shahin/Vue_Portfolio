@@ -23,7 +23,7 @@
                                 <li><span class="text-muted"><b>Duration</b> : 5hr</span></li>
                                 <li><span class="text-muted"><b>Videos</b> : 10+</span></li>
                                 <li><span class="text-muted"><b>Tags</b> : PHP,Laravel,WEB</span></li>
-                                <li class="mt-2"><a href="" class="btn btn-sm btn-success"><i class="fa fa-eye"></i> View Course</a></li>
+                                <li class="mt-2"><router-link to="/courses/abc" class="btn btn-sm btn-success"><i class="fa fa-eye"></i> View Course</router-link></li>
                             </ul>
                         </div>
                     </div>

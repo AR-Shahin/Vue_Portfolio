@@ -7,7 +7,6 @@
     <service-section/>
     <youtube-section/>
     <portfolio-section/>
-    <footer-section/>
   </div>
 </template>
 
@@ -17,7 +16,6 @@ import AboutSection from '@/components/sections/AboutSection.vue';
 import ServiceSection from '@/components/sections/ServiceSection.vue';
 import PortfolioSection from '@/components/sections/PortfolioSection.vue';
 import YoutubeSection from '@/components/sections/YoutubeSection.vue';
-import FooterSection from '@/components/sections/FooterSection.vue';
 // @ is an alias to /src
 
 export default {
@@ -25,8 +23,7 @@ export default {
   components: {
     HeroSection,AboutSection,
     ServiceSection,
-    YoutubeSection,
-    FooterSection,PortfolioSection
+    YoutubeSection,PortfolioSection
   }
 }
 </script>
