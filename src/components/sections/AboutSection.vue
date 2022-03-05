@@ -5,7 +5,7 @@
          <div class="col-12 col-sm-6 col-md-6 align-self-center">
             <div class="myImage_slider">
                <div class="owl-carousel about_slider">
-                  <div class="single-slider-image">
+                  <div class="single-slider-image ">
                      <carousel :items-to-show="1" :autoplay="2000" :wrapAround=true :transition=300>
                         <slide v-for="slide in  data.sliders " :key="slide">
                            <div class="img-box">
@@ -80,34 +80,24 @@
                                        <div class="tab-content" id="v-pills-tabContent">
                                           <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                                              <ul>
-                                                <li><span>HTML5</span></li>
-                                                <li><span>CSS3</span></li>
-                                                <li><span>BOOTSTRAP4</span></li>
-                                                <li><span>WordPress</span></li>
-                                                <li><span>JAVASCRIPT</span></li>
-                                                <li><span>JQUERY</span></li>
-                                                <li><span>Vue</span></li>
-                                                <li><span>Nuxt</span></li>
-                                                <li><span>Tailwind CSS</span></li>
+                                                <li v-for="skill in skills.frontend" :key="skill">
+                                                    <span class="mx-1">{{skill}}</span>
+                                                </li>
+                                                
                                              </ul>
                                           </div>
                                           <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
                                              <ul>
-                                                <li><span>PHP</span></li>
-                                                <li><span>AJAX</span></li>
-                                                <li><span>AXIOS</span></li>
-                                                <li><span>MYSQL</span></li>
-                                                <li><span>LARAVEL</span></li>
-                                                <li><span>Lumen</span></li>
+                                                <li v-for="skill in skills.backend" :key="skill">
+                                                    <span class="mx-1">{{skill}}</span>
+                                                </li>
                                              </ul>
                                           </div>
                                           <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
                                              <ul>
-                                                <li><span>GIT</span></li>
-                                                <li><span>GITHUB</span></li>
-                                                <li><span>GITLAB</span></li>
-                                                <li><span>Mark Down</span></li>
-                                                <li><span>Adobe Photoshop</span></li>
+                                                <li v-for="skill in skills.others" :key="skill">
+                                                    <span class="mx-1">{{skill}}</span>
+                                                </li>
                                              </ul>
                                           </div>
                                        </div>
@@ -180,12 +170,16 @@ import { reactive } from '@vue/reactivity';
                 {'title' : 'Wlaing','path' : 'img.png'},
             ]
         });
-
+        const skills = reactive({
+            'frontend' : ['HTML5','CSS3','BOOTSTRAP4','WordPress','JAVASCRIPT','JQUERY','Vue','Nuxt','Tailwind CSS'],
+            'backend' : ['PHP','AJAX','AXIOS','MYSQL','LARAVEL','Lumen'],
+            'others' : ['GIT','GITHUB','GITLAB','Mark Down','Adobe Photoshop'],
+        });
         const imgPath = (el)=>{
             return `/src/assets/img/my/${el}`
         }
         return{
-            data,imgPath
+            data,imgPath,skills
         }
     }
     }
@@ -225,4 +219,5 @@ import { reactive } from '@vue/reactivity';
     #about_section ul li span:hover{
         color: #111;
     }
+    
 </style>
