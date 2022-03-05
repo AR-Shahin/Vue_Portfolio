@@ -52,6 +52,10 @@
 </script>
 
 <style lang="scss" scoped>
+#single_course{
+    background: #1abc9c2f;
+}
+
 .thumb_image{
     height: 60vh;
     width: 100vw;

@@ -1,7 +1,6 @@
 <template>
   <div class="home">
     <hero-section/>
-
     <about-section/>
 
     <service-section/>
@@ -16,6 +15,7 @@ import AboutSection from '@/components/sections/AboutSection.vue';
 import ServiceSection from '@/components/sections/ServiceSection.vue';
 import PortfolioSection from '@/components/sections/PortfolioSection.vue';
 import YoutubeSection from '@/components/sections/YoutubeSection.vue';
+
 // @ is an alias to /src
 
 export default {
@@ -28,4 +28,5 @@ export default {
 }
 </script>
 ,
+    VueSlider,
     FooterSection
