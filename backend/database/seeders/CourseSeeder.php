@@ -24,8 +24,8 @@ class CourseSeeder extends Seeder
                 'name' => $course,
                 'slug' => str($course)->slug(),
                 'duration' => rand(1, 10),
-                'image' => "e",
-                'thumb' => "e",
+                'image' => "storage/course/default.png",
+                'thumb' => "storage/course/default.png",
                 'short_des' => "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus sapiente asperiores quasi minima vero dolores architecto odit magnam dignissimos!",
                 'long_des' => "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus sapiente asperiores quasi minima vero dolores architecto odit magnam dignissimos!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus sapiente asperiores quasi minima vero dolores architecto odit magnam dignissimos!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus sapiente asperiores quasi minima vero dolores architecto odit magnam dignissimos!",
             ]);

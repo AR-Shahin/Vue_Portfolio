@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Admin;
 use App\Models\Product;
+use App\Models\Video;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -30,5 +31,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             CourseSeeder::class
         ]);
+
+        Video::factory(50)->create();
     }
 }
