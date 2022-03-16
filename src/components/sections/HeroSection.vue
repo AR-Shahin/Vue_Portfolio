@@ -9,15 +9,9 @@
                             <h1 class="">Anisur Rahman Shahin</h1>
                             <div class="tagline">
                                 <div class="cd-intro">
-                                    <h6 class="cd-headline letters rotate-2">
-                                                <span class="cd-words-wrapper text-left">
-                                                    <b class="is-visible">Web Developer</b>
-                                                    <b>GraphicDesigner</b>
-                                                    <b>Photographer</b>
-
-                                                </span>
-                                    </h6>
-                                </div> </div>        <!--   <h6 style="font-size: 18px;m-0;p-0"><i>Web Designer</i></h6> -->
+                                   <em style="color:#be2edd"> <type-module/></em>
+                                </div> 
+                                </div>
                             <div class="hero-social-media " >
                                 <ul>
                                     <li><a href="@if($link){{$link->facebook}} @endif" target="_blank"><i class="fa fa-facebook"></i></a></li>
@@ -39,9 +33,13 @@
 </template>
 
 <script>
-    export default {
-        
+
+import TypeModule from '../module/TypeModule.vue';
+export default{
+    components:{
+        TypeModule
     }
+}
 </script>
 
 <style lang="scss" scoped>

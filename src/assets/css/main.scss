@@ -146,8 +146,11 @@ section {
     border-bottom: 1px solid #fff;
     padding: 10px 0;
   }
+  #contact_section .bg_content {
+    position: fixed;
+    top: 0;
+  }
   #contact .bg {
-    padding: 0;
     text-align: center;
     height: 100%;
   }
@@ -185,6 +188,5 @@ section {
     display: inline;
   }
 }
-/*@media (min-width:576px) and (max-width:767px){*/
-
-/*}*/
+@media (min-width: 576px) and (max-width: 767px) {
+}
