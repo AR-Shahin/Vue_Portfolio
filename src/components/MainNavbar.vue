@@ -11,16 +11,19 @@
             <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav" style="margin-left:auto">
                 <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="https://tutspack.com/" target="_blank">Blog</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
+                <a class="nav-link" href="#service_section">Services</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
+                <a class="nav-link" href="#youtube_section">Courses</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                <a class="nav-link" href="#portfolio_section" tabindex="-1" aria-disabled="true">Portfolio</a>
+                </li>
+                 <li class="nav-item">
+                <a class="nav-link" href="#contact_section" tabindex="-1" aria-disabled="true">Contact</a>
                 </li>
             </ul>
             </div>
