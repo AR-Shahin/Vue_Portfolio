@@ -12,7 +12,7 @@ class CourseController extends Controller
     public function index()
     {
         try {
-            $data = Course::latest()->get();
+            $data = Course::with('videos')->latest()->get();
             if ($data->count() != 0) {
                 return sendSuccessResponse($data, 'Data Retrieved Successfully!');
             } else {
