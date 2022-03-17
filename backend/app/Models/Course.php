@@ -15,4 +15,9 @@ class Course extends Model
     {
         return $this->hasMany(Video::class);
     }
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }

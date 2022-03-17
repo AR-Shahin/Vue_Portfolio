@@ -1,7 +1,11 @@
 <?php
 
-use App\Http\Controllers\Admin\CrudController;
-use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\{
+    CourseController,
+    CrudController,
+    DashboardController
+};
+
 use Illuminate\Support\Facades\Route;
 
 
@@ -20,5 +24,14 @@ Route::prefix('admin')->as('admin.')->middleware(['auth:admin'])->group(function
         Route::get('{crud}', 'show')->name('view');
 
         Route::post('{crud}', 'update')->name('update');
+    });
+
+    # Course
+
+    Route::controller(CourseController::class)->prefix('courses')->name('courses.')->group(function () {
+        Route::get('/', 'index')->name('index');
+        Route::get('/videos/{course}', 'view')->name('view');
+        Route::get('/create/videos/{course}', 'createCourseVideo')->name('create');
+        Route::post('/store/videos/{course}', 'storeCourseVideo')->name('store');
     });
 });
