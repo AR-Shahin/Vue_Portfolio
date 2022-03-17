@@ -24,7 +24,7 @@
                                 <li><span class="text-muted"><b>Duration</b> : {{course.duration}}hr</span></li>
                                 <li><span class="text-muted"><b>Videos</b> : {{course.videos.length}}+</span></li>
                                 <li><span class="text-muted"><b>Tags</b> : PHP,Laravel,WEB</span></li>
-                                <li class="mt-2"><router-link to="/courses/abc" class="btn btn-sm btn-success"><i class="fa fa-eye"></i> View Course</router-link></li>
+                                <li class="mt-2"><router-link :to="`/courses/${course.slug}`" class="btn btn-sm btn-success"><i class="fa fa-eye"></i> View Course</router-link></li>
                             </ul>
                         </div>
                     </div>
