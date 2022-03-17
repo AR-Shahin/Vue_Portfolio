@@ -15,8 +15,9 @@
             <div class="row">
                 <div class="col-md-4 col-12 mb-4" v-for="course in courses" :key="course.id">
                     <div class="card text-center">
+                        <!-- {{ course }} -->
                         <div class="card-body">
-                            <img :src="`http://127.0.0.1:8000/${course.image}`" alt="" class="img-fluid">
+                            <img :src="imageUrl('default.png')" alt="" class="img-fluid">
                             <h3 class="card-title my-3">{{course.name}}</h3>
                             <p>{{course.short_des}}</p>
                             <ul>
@@ -42,12 +43,17 @@ import { onMounted } from '@vue/runtime-core'
                  type : Object
              }
          },
-        setup(props){
+        setup(){
 
-     
+            const imageUrl = (path="default.png") => `https://laravel-portfolio-api.herokuapp.com/${path}`;
             onMounted(() =>{
-                console.log((props.courses[0]))
-            })
+                // console.log((props.courses[0]));
+            });
+
+
+            return {
+                imageUrl
+            }
         }
     }
 </script>
