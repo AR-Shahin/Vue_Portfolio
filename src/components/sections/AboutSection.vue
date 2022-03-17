@@ -31,15 +31,21 @@
                   <div class="col-12">
                      <nav>
                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                           <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
-                           <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</button>
+                           <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">About Me</button>
+                           <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Skills</button>
                            <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
                         </div>
                      </nav>
                      <div class="tab-content" id="nav-tabContent">
                         <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi iste pariatur veritatis laudantium rem ab voluptates nulla, odit facere alias, quidem perspiciatis quisquam delectus consequuntur accusantium
+                           <p class="mt-2">
+                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi iste pariatur veritatis laudantium rem ab voluptates nulla, odit facere alias, quidem perspiciatis quisquam delectus consequuntur accusantium
                            deleniti. Modi, aliquam exercitationem.
+                           </p>
+                            <p class="mt-1">
+                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi iste pariatur veritatis laudantium rem ab voluptates nulla, odit facere alias, quidem perspiciatis quisquam delectus consequuntur accusantium
+                           deleniti. Modi, aliquam exercitationem.
+                           </p>
                         </div>
                         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                            <div class="card">
@@ -115,20 +121,19 @@
                                           <thead>
                                              <tr>
                                                 <th>Phone</th>
-                                                <td><span>dd</span></td>
+                                                <td><span>+8801754100439</span></td>
                                              </tr>
                                              <tr>
                                                 <th>Email</th>
                                                 <td>
                                                    <span>
-                                                   <a href="">e</a>
-                                                   @endif
+                                                   <a href="">mdshahinmije96@gmail.com</a>
                                                    </span>
                                                 </td>
                                              </tr>
                                              <tr>
                                                 <th>Address</th>
-                                                <td><span>f@endif</span></td>
+                                                <td><span>Mohakhali,Dhaka,Bangladesh</span></td>
                                              </tr>
                                              <tr>
                                                 <th>Resume</th>
