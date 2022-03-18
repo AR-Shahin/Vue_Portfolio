@@ -39,13 +39,9 @@
                      <div class="tab-content" id="nav-tabContent">
                         <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                            <p class="mt-2">
-                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi iste pariatur veritatis laudantium rem ab voluptates nulla, odit facere alias, quidem perspiciatis quisquam delectus consequuntur accusantium
-                           deleniti. Modi, aliquam exercitationem.
+                               Hello, I am shahin. I am a student of computer science and engineering at SEU. I've been working on Laravel for one year. I've completed an internship a couple of months ago in BK software. During this internship, I've contributed to a couple of projects. I am working on an education management system. Where a student can post their assignments and the teacher can bid this assignment. In this project, per day we handle 1000 user requests. In my leisure time, I make programming related videos on my youtube channel and write content on my website. So that I can learn new technologies and improve my teaching skills.
                            </p>
-                            <p class="mt-1">
-                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi iste pariatur veritatis laudantium rem ab voluptates nulla, odit facere alias, quidem perspiciatis quisquam delectus consequuntur accusantium
-                           deleniti. Modi, aliquam exercitationem.
-                           </p>
+                           
                         </div>
                         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                            <div class="card">

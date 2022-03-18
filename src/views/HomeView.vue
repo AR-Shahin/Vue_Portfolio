@@ -2,7 +2,7 @@
   <div class="home">
     <hero-section/>
     <about-section/>
-
+    <!-- <AnotherVideo/> -->
     <service-section/>
     <!-- {{ data.courses }} -->
     <youtube-section :courses="data.courses"/>
@@ -19,6 +19,8 @@ import ServiceSection from '@/components/sections/ServiceSection.vue';
 import PortfolioSection from '@/components/sections/PortfolioSection.vue';
 import YoutubeSection from '@/components/sections/YoutubeSection.vue';
 import ContactSection from '@/components/sections/ContactSection.vue';
+
+
 import { onMounted, reactive } from '@vue/runtime-core';
 import axios from 'axios';
 import { useStore } from 'vuex';
