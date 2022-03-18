@@ -27,11 +27,11 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('password')
         ]);
         // \App\Models\Admin::factory(10)->create();
-        Product::factory(10)->create();
+        // Product::factory(10)->create();
         $this->call([
-            CourseSeeder::class
+            CourseSeeder::class,
+            SocialSeeder::class,
+            VideoSeeder::class
         ]);
-
-        Video::factory(50)->create();
     }
 }

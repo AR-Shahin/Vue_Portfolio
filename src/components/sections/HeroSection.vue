@@ -14,11 +14,11 @@
                                 </div>
                             <div class="hero-social-media " >
                                 <ul>
-                                    <li><a href="@if($link){{$link->facebook}} @endif" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="@if($link){{$link->twitter}} @endif" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="@if($link){{$link->github}} @endif" target="_blank"><i class="fa fa-github"></i></a></li>
-                                    <li><a href="@if($link){{$link->youtube}} @endif" target="_blank"><i class="fa fa-youtube"></i></a></li>
-                                    <li><a href="@if($link){{$link->linkedin}} @endif" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a :href="social.facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a :href="social.twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a :href="social.github" target="_blank"><i class="fa fa-github"></i></a></li>
+                                    <li><a :href="social.youtube" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                                    <li><a :href="social.linkedin" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -36,6 +36,11 @@
 
 import TypeModule from '../module/TypeModule.vue';
 export default{
+    props: {
+        social : {
+            type : Object
+        }
+         },
     components:{
         TypeModule
     }

@@ -1,13 +1,13 @@
 <template>
   <div class="home">
-    <hero-section/>
+    <hero-section :social="data.social"/>
     <about-section/>
     <!-- <AnotherVideo/> -->
     <service-section/>
     <!-- {{ data.courses }} -->
     <youtube-section :courses="data.courses"/>
     <portfolio-section/>
-    <contact-section/>
+    <contact-section />
 
   </div>
 </template>
@@ -38,12 +38,18 @@ export default {
       const store = useStore();
       const url = store.getters.getBaseUrl;
       const data = reactive({
-          courses : []
+          courses : [],
+          social : {}
       })
       onMounted(() => {
           axios.get(`${url}/courses`)
           .then(res => {
               data.courses = res.data.data
+          })
+
+          axios.get(`${url}/social-links`)
+          .then(res => {
+              data.social = res.data.data
           })
       })
 

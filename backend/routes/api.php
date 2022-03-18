@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\CourseController;
+use App\Http\Controllers\Api\SocialController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -23,3 +24,5 @@ Route::controller(CourseController::class)->prefix('courses')->group(function ()
     Route::get('/', 'index');
     Route::get('/{slug}', 'singleCourse');
 });
+
+Route::get('social-links', [SocialController::class, 'index'])->name('social');
