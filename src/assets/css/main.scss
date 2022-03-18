@@ -79,13 +79,13 @@ section {
     padding: 10px 0;
   }
   #contact .bg {
-    padding: 0;
+    padding: 0 !important;
     text-align: center;
     height: 100%;
   }
   #contact .bg_content {
     left: 0;
-    position: inherit;
+    position: inherit !important;
   }
   #contact .contact_media {
     border-bottom: 1px solid #fff;
@@ -102,6 +102,7 @@ section {
   }
   #link_section {
     padding: 25px 0;
+    margin-top: 115px;
   }
   #link_section .col-12 {
     padding: 10px 0;
@@ -151,10 +152,11 @@ section {
   #contact .bg {
     text-align: center;
     height: 100%;
+    padding: 0 !important;
   }
   #contact .bg_content {
     left: 0;
-    position: inherit;
+    position: inherit !important;
   }
   #contact .contact_media {
     border-bottom: 1px solid #fff;
@@ -171,6 +173,7 @@ section {
   }
   #link_section {
     padding: 25px 0;
+    margin-top: 115px;
   }
   #link_section .col-12 {
     padding: 10px 0;
