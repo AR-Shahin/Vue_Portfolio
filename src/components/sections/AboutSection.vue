@@ -9,8 +9,8 @@
                      <carousel :items-to-show="1" :autoplay="2000" :wrapAround=true :transition=300>
                         <slide v-for="slide in  data.sliders " :key="slide">
                            <div class="img-box">
-                               
-                              <img src="../../assets/img/my/img.png" alt="" class="img-fluid" />
+                               {{  }}
+                              <img :src="imgPath(slide.path)" alt="" class="img-fluid w-100" />
                            </div>
                            <div class="pos_content">
                               <span>{{ slide.title }}</span>
@@ -166,21 +166,23 @@ import { reactive } from '@vue/reactivity';
         const data = reactive({
             'sliders' : [
                 {'title' : 'Codding','path' : 'img.jpg'},
-                {'title' : 'Developent','path' : 'img.png'},
-                {'title' : 'Teaching','path' : 'img.jpg'},
-                {'title' : 'Wlaing','path' : 'img.png'},
-            ]
+                {'title' : 'Photo Shotting','path' : 'img.png'},
+                {'title' : 'Teaching C Programming','path' : 'img2.JPG'},
+                {'title' : 'Programming Contest Prize','path' : 'img3.JPG'},
+                {'title' : 'Taking Class at SEU','path' : 'img4.JPG'},
+            ],
         });
+        const path = "https://laravel-portfolio-api.herokuapp.com/images/my/img.png"
         const skills = reactive({
             'frontend' : ['HTML5','CSS3','BOOTSTRAP4','WordPress','JAVASCRIPT','JQUERY','Vue','Nuxt','Tailwind CSS'],
             'backend' : ['PHP','AJAX','AXIOS','MYSQL','LARAVEL','Lumen'],
             'others' : ['GIT','GITHUB','GITLAB','Mark Down','Adobe Photoshop'],
         });
         const imgPath = (el)=>{
-            return `/src/assets/img/my/${el}`
+            return `https://laravel-portfolio-api.herokuapp.com/images/my/${el}`
         }
         return{
-            data,imgPath,skills
+            data,imgPath,skills,path
         }
     }
     }
