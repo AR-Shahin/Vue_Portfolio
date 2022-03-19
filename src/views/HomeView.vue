@@ -7,7 +7,7 @@
     <!-- {{ data.courses }} -->
     <youtube-section :courses="data.courses"/>
     <portfolio-section/>
-    <contact-section />
+    <contact-section :social="data.social"/>
 
   </div>
 </template>

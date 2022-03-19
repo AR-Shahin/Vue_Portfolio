@@ -29,40 +29,40 @@
                                     <div class="contact_media">
                                         <h5>Email</h5>
                                         <span>
-                                            mdhshahinmije96@gmail.com
+                                            mdshahinmije96@gmail.com
                                         </span>
                                     </div>
                                     <div class="contact_media">
                                         <h5>Address</h5>
                                         <span>
-                                            Mohakhali
+                                            Mohakhali,Dhaka,Bangladesh
                                         </span>
                                     </div>
                                     <div class="socal_links">
                                         <ul>
                                             <li>
                                                 <a
-                                                    href="@if ($link) {{ $link->facebook }} @endif"><i
+                                                    :href="social.facebook"><i
                                                         class="fa fa-facebook"></i></a>
                                             </li>
                                             <li>
                                                 <a
-                                                    href="@if ($link) {{ $link->twitter }} @endif"><i
+                                                    :href="social.twitter"><i
                                                         class="fa fa-twitter"></i></a>
                                             </li>
                                             <li>
                                                 <a
-                                                    href="@if ($link) {{ $link->instagram }} @endif"><i
+                                                    :href="social.instagram"><i
                                                         class="fa fa-instagram"></i></a>
                                             </li>
                                             <li>
                                                 <a
-                                                    href="@if ($link) {{ $link->linkedin }} @endif"><i
+                                                    :href="social.linkedin"><i
                                                         class="fa fa-linkedin"></i></a>
                                             </li>
                                             <li>
                                                 <a
-                                                    href="@if ($link) {{ $link->github }} @endif"><i
+                                                    :href="social.github"><i
                                                         class="fa fa-github"></i></a>
                                             </li>
                                         </ul>
@@ -103,7 +103,11 @@
 
 <script>
     export default {
-        
+        props: {
+        social : {
+            type : Object
+        }
+         },
     }
 </script>
 
