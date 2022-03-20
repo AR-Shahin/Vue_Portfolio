@@ -25,7 +25,7 @@ class CrudController extends Controller
         $crud =  Crud::create([
             'name' => $request->name,
             'slug' => $request->name,
-            'image' => File::upload($request->file('image'), 'crud')
+            'image' => File::uploadInPublic($request->file('image'), 'crud')
         ]);
         if ($crud) {
             return true;

@@ -21,4 +21,15 @@ class File
             unlink($file);
         }
     }
+
+    public static function uploadInPublic($file, $path)
+    {
+        $image = $file;
+        $name_gen = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
+        $uploads = "images/{$path}/";
+        $last_img = $uploads . $name_gen;
+        $image->move(public_path("images/{$path}/"), $last_img);
+
+        return $last_img;
+    }
 }
