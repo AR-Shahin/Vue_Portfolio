@@ -146,6 +146,10 @@ import Swal from "sweetalert2";
             contact.email = ""
             contact.subject = ""
             contact.message = ""
+            error.name = ""
+            error.email = ""
+            error.subject = ""
+            error.message = ""
             Swal.fire(res.data.message);
           }).catch(err => {
 

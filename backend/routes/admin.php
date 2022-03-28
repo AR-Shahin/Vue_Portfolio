@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\{
+    ContactController,
     CourseController,
     CrudController,
     DashboardController
@@ -34,4 +35,8 @@ Route::prefix('admin')->as('admin.')->middleware(['auth:admin'])->group(function
         Route::get('/create/videos/{course}', 'createCourseVideo')->name('create');
         Route::post('/store/videos/{course}', 'storeCourseVideo')->name('store');
     });
+
+    # Contact
+
+    Route::get('contact', [ContactController::class, 'index'])->name('contact.index');
 });
