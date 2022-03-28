@@ -13,6 +13,7 @@
         "core-js": "^3.8.3",
         "url-loader": "^4.1.1",
         "vue": "^3.2.13",
+        "vue-cool-lightbox": "^2.7.4",
         "vue-core-video-player": "^0.2.0",
         "vue-lazytube": "^1.0.2",
         "vue-router": "^4.0.3",

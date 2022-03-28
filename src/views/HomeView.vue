@@ -21,6 +21,7 @@ import YoutubeSection from '@/components/sections/YoutubeSection.vue';
 import ContactSection from '@/components/sections/ContactSection.vue';
 
 
+
 import { onMounted, reactive } from '@vue/runtime-core';
 import axios from 'axios';
 import { useStore } from 'vuex';
@@ -39,7 +40,8 @@ export default {
       const url = store.getters.getBaseUrl;
       const data = reactive({
           courses : [],
-          social : {}
+          social : {},
+          sliders : []
       })
       onMounted(() => {
           axios.get(`${url}/courses`)
@@ -50,6 +52,11 @@ export default {
           axios.get(`${url}/social-links`)
           .then(res => {
               data.social = res.data.data
+          })
+
+          axios.get(`${url}/sliders`)
+          .then(res => {
+              data.sliders = res.data.data
           })
       })
 

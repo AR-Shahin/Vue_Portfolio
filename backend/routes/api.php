@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\CourseController;
+use App\Http\Controllers\Api\SliderController;
 use App\Http\Controllers\Api\SocialController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Http\Request;
@@ -26,3 +27,5 @@ Route::controller(CourseController::class)->prefix('courses')->group(function ()
 });
 
 Route::get('social-links', [SocialController::class, 'index'])->name('social');
+
+Route::get('sliders', [SliderController::class, 'index']);
