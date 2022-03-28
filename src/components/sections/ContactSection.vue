@@ -69,22 +69,26 @@
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-7" style="background: #fff;">
-                                    <form id="contactFormHome">
+                                    <form id="contactFormHome" @submit.prevent="handleForm">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Enter Your Name"
-                                                name="name" id="name" />
+                                            <input type="text" class="form-control" :class="{'is-invalid ': error.name}" placeholder="Enter Your Name"
+                                                v-model="contact.name" id="name" />
+                                                <span class="text-danger" v-if="error.name">{{error.name}}</span>
                                         </div>
                                         <div class="form-group">
-                                            <input type="email" class="form-control" placeholder="Enter Your Email"
-                                                name="email" id="email" />
+                                            <input type="email" class="form-control" placeholder="Enter Your Email" :class="{'is-invalid ': error.email}"
+                                                v-model="contact.email" id="email" />
+                                                 <span class="text-danger" v-if="error.email">{{error.email}}</span>
                                         </div>
                                         <div class="form-group">
                                             <input type="text" class="form-control" placeholder="Subject"
-                                                name="subject" id="subject" />
+                                                 v-model="contact.subject" id="subject" :class="{'is-invalid ': error.subject}"/>
+                                                  <span class="text-danger" v-if="error.subject">{{error.subject}}</span>
                                         </div>
                                         <div class="form-group">
-                                            <textarea name="text" id="text" cols="30" rows="5"
-                                                class="form-control"></textarea>
+                                            <textarea  v-model="contact.message" id="text" cols="30" rows="5"
+                                                class="form-control" :class="{'is-invalid ': error.message}"></textarea>
+                                                 <span class="text-danger" v-if="error.message">{{error.message}}</span>
                                         </div>
                                         <div class="form-group text-right">
                                             <input type="submit" class="btn btn-primary" value="Submit" />
@@ -102,12 +106,71 @@
 </template>
 
 <script>
+import { useStore } from 'vuex';
+import axios from 'axios';
+import { reactive } from '@vue/reactivity';
+import Swal from "sweetalert2";
     export default {
         props: {
         social : {
             type : Object
         }
-         },
+        },
+        setup() {
+        const contact = reactive({
+            name : '',
+            email : '',
+            subject : '',
+            message : '',
+        });
+
+        const error = reactive({
+            name : '',
+            email : '',
+            subject : '',
+            message : '',
+        });
+        const store = useStore();
+        const url = store.getters.getBaseUrl;
+
+
+        const handleForm = () => {
+        axios.post(`${url}/contact`,{
+            name: contact.name,
+            email: contact.email,
+            subject: contact.subject,
+            message: contact.message,
+        })
+          .then(res => {
+            contact.name = ""
+            contact.email = ""
+            contact.subject = ""
+            contact.message = ""
+            Swal.fire(res.data.message);
+          }).catch(err => {
+
+            if(err.response.data.data.name[0]){
+                error.name = err.response.data.data.name[0]    
+            }
+            if(err.response.data.data.email[0]){
+                error.email = err.response.data.data.email[0]    
+            }
+            if(err.response.data.data.subject[0]){
+                error.subject = err.response.data.data.subject[0]    
+            }
+            if(err.response.data.data.message[0]){
+                error.message = err.response.data.data.message[0]    
+            }
+
+          })         
+        }
+    
+
+
+        return{
+            contact,handleForm,error
+        }
+    }
     }
 </script>
 

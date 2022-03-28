@@ -1,9 +1,13 @@
 <?php
 
-use App\Http\Controllers\Api\CourseController;
-use App\Http\Controllers\Api\SliderController;
-use App\Http\Controllers\Api\SocialController;
-use App\Http\Controllers\ProductController;
+use App\Http\Controllers\Api\{
+    ContactController,
+    CourseController,
+    SliderController,
+    SocialController,
+    ProductController
+};
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -29,3 +33,6 @@ Route::controller(CourseController::class)->prefix('courses')->group(function ()
 Route::get('social-links', [SocialController::class, 'index'])->name('social');
 
 Route::get('sliders', [SliderController::class, 'index']);
+
+
+Route::post('contact', [ContactController::class, 'store']);
