@@ -38,5 +38,9 @@ Route::prefix('admin')->as('admin.')->middleware(['auth:admin'])->group(function
 
     # Contact
 
-    Route::get('contact', [ContactController::class, 'index'])->name('contact.index');
+    Route::controller(ContactController::class)->prefix('contact')->name('contact.')->group(function () {
+        Route::get('/', 'index')->name('index');
+        Route::get('/{contact}', 'view')->name('view');
+        Route::get('/ajax/all', 'all')->name('all');
+    });
 });

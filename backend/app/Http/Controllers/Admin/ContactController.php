@@ -10,7 +10,16 @@ class ContactController extends Controller
 {
     public function index()
     {
-        $contacts = Contact::latest()->get();
-        return view('Backend.contact.index', compact('contacts'));
+
+        return view('Backend.contact.index');
+    }
+
+    public function all()
+    {
+        return Contact::latest()->get();
+    }
+    public function view(Contact $contact)
+    {
+        return $contact;
     }
 }
