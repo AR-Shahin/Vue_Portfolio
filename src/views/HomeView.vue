@@ -7,6 +7,7 @@
     <!-- {{ data.courses }} -->
     <youtube-section :courses="data.courses"/>
     <portfolio-section/>
+    <TestimonialSection/>
     <contact-section :social="data.social"/>
 
   </div>
@@ -19,6 +20,7 @@ import ServiceSection from '@/components/sections/ServiceSection.vue';
 import PortfolioSection from '@/components/sections/PortfolioSection.vue';
 import YoutubeSection from '@/components/sections/YoutubeSection.vue';
 import ContactSection from '@/components/sections/ContactSection.vue';
+import TestimonialSection from '@/components/sections/TestimonialSection.vue';
 
 
 
@@ -33,7 +35,10 @@ export default {
   components: {
     HeroSection,AboutSection,
     ServiceSection,
-    YoutubeSection,PortfolioSection,ContactSection
+    YoutubeSection,
+    PortfolioSection,
+    ContactSection,TestimonialSection
+
   },
   setup(){
       const store = useStore();
